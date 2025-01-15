@@ -1,11 +1,8 @@
 #include<iostream>
 #include<string>
 using namespace std;
-
-//成员函数为另一个类的友元函数
-
+//友元类的成员函数可以调用类中的所有成员.
 class Girl;
-
 class Boy
 {
     private:
@@ -17,7 +14,8 @@ class Boy
             name = n;
             age = a;
         }
-        void disp(Girl &);
+        void disp1(Girl &);
+        void disp2(Girl &);
 };
 class Girl
 {
@@ -30,20 +28,26 @@ class Girl
             name = n;
             age = a;
         }
-        friend void Boy::disp(Girl &);
+        friend Boy;
 };
 
 int main()
 {
     Boy b1("陈大林",11);
     Girl g1("张晓好",12);
-    b1.disp(g1);
+    b1.disp1(g1);
+    b1.disp2(g1);
+    return 0;
 }
 
-void Boy::disp(Girl &g)
+void Boy::disp1(Girl &g)
 {
     cout<<"男孩的姓名:"<<name<<endl;
-    cout<<"男孩的年龄为:"<<age<<endl;
-    cout<<"女孩的姓名为:"<<g.name<<endl;
-    cout<<"女孩的年龄为:"<<g.age<<endl;
+    cout<<"女孩的姓名:"<<g.name<<endl;
+}
+
+void Boy::disp2(Girl &g)
+{
+    cout<<"男孩的年龄:"<<age<<endl;
+    cout<<"女孩的年龄:"<<g.age<<endl;
 }
