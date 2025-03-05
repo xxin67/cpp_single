@@ -5,3 +5,5 @@ polymorphism/bin
 template/bin
 io_f_stream/bin
 stl/bin
+data_struct/bin
+stl/1.cpp
