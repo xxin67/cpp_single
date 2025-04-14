@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.f90": "FortranFreeForm",
         "random": "cpp",
         "iostream": "cpp",
         "ostream": "cpp",
@@ -52,6 +53,10 @@
         "streambuf": "cpp",
         "text_encoding": "cpp",
         "typeinfo": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "list": "cpp",
+        "fstream": "cpp",
+        "chrono": "cpp",
+        "ratio": "cpp"
     }
 }

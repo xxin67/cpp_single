@@ -112,12 +112,12 @@ class Dictionary
 public:
     Dictionary() {}
     virtual ~Dictionary() {}
-    virtual void clear() = 0;
-    virtual void insert(const Key &k, const E &e) = 0;
-    virtual E remove(const Key &k) = 0;
-    virtual E RemoveAny() = 0;
-    virtual E find(const Key &k) const = 0;
-    virtual int size() = 0;
+    virtual void clear() = 0;                          // 清空字典纯虚函数
+    virtual void insert(const Key &k, const E &e) = 0; // 插入数据纯虚函数
+    virtual E remove(const Key &k) = 0;                // 清除k关键码对应的数据
+    virtual E RemoveAny() = 0;                         // 随机访问数据并在之后清除
+    virtual E find(const Key &k) const = 0;            // 寻找k关键码对应的数据内容
+    virtual int size() = 0;                            // 返回字典大小
 };
 
 // 键值对类
